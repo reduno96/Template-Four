@@ -253,7 +253,7 @@ p[data-width="wide"] {
   .mobile-nav-toggle {
     display: block; 
     position: fixed;
-    top: var(--size-600);
+    top: 44px;
     right: var(--size-400);
     cursor: pointer;
     background-color: transparent;
@@ -261,7 +261,6 @@ p[data-width="wide"] {
     padding: 0.5em;
     width: 1.5em;
     aspect-ratio: 1;
-    
     background-image: url("images/icon-hamburger.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -282,19 +281,27 @@ p[data-width="wide"] {
 
 .primary-footer-wrapper {
   display: grid;
+  gap: var(--size-700);
+  justify-content: center;
   grid-template: 
   "form"
   "nav"
-  "logo-social";
+  "social"
+  "logo"
+  "copyright";
 }
 
-.primary-footer-logo-social {
-  grid-area: logo-social;
+.primary-footer-logo {
+  grid-area: logo;
+}
 
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: var(--size-700);
+.primary-footer-form {
+  grid-area: logo;
+}
+
+.primary-footer-copyright {
+  grid-area: copyright;
+  opacity: 0.5;
 }
 
 .primary-footer-nav {
@@ -304,16 +311,11 @@ p[data-width="wide"] {
 .primary-footer-form {
   grid-area: form;
 
-  display: grid;
-  align-content: space-between;
-}
-
-.primary-footer form {
   display: flex;
-  gap: var(--size-400);
+  gap: var(--size-200);
 }
 
-input:where([type="text"], [type="email"]) {
+input:where([type="text"], [type="email"],) {
   border-radius: 100vw;
   border: 0;
   padding: var(--size-300) var(--size-400);
@@ -321,27 +323,22 @@ input:where([type="text"], [type="email"]) {
 
 @media (min-width: 47em) {
   .primary-footer-wrapper {
-    grid-template-areas: "logo-social nav form"
-  }
-  .primary-footer-logo-social {
-    align-items: flex-start;
-    justify-content: space-between;
+    grid-template-areas: 
+    "logo nav form"
+    "social nav copyright"
   }
 }
 
-@media (max-width: 47em) {
+/* @media (max-width: 47em) {
   .primary-footer-wrapper > * {
     margin-inline: auto;
   }
-  .primary-footer-wrapper {
-    gap: var(--size-700);
-  }
-}
+} */
 
 
 /* Footer Navigation */
+
 .footer-nav {
-  margin: 0 20px;
   columns: 2;
   gap: clamp(var(--size-200), 30vw, var(--size-900));
 }
@@ -365,23 +362,13 @@ input:where([type="text"], [type="email"]) {
 
 .social-icon {
   width: var(--size-600);
-  aspect-ratio: 1/1;
+  aspect-ratio: 1;
   fill: var(--clr-neutral-100);
 }
 
 .social-list a:is(:hover, :focus) .social-icon {
   fill: var(--clr-accent-400);
 }
-
-@media (min-width: 47em) {
-  .social-list {
-    gap: var(--size-300);
-  }
-  .social-icon {
-    width: var(--size-400);
-  }
-}
-
 /* cta */
 
 .cta {
@@ -527,6 +514,8 @@ input:where([type="text"], [type="email"]) {
   width: var(--size-800);
   position: relative;
   top: calc(var(--size-800) / 2);
+  background-color:var(--clr-neutral-200);
+  border-radius: 100vmax;
   margin-inline: auto;
 }
 
@@ -559,25 +548,41 @@ input:where([type="text"], [type="email"]) {
   background-color: var(--clr-accent-400);
 } 
 
-/* image with blod bg */
+/* hero */
 
-@media (max-width: 47em ) {
-  .hero__image {
-    order: -1;
-  }
-}
-
-.hero__image::before{
+.hero__image::before {
   content: "";
   position: absolute;
   z-index: -1;
   right: 0;
   top: 0;
   width: 87%;
-  max-height: 70vh;;
-  max-height: 70dvh;;
+  max-height: 70vh;
+  max-height: 70dvh;
   aspect-ratio: 1 / 1.2;
   background-image: url("images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+@media (min-width: 47em ) {
+  .hero__image::before {
+    width: 45%;
+  }
+}
+
+/* Sales Points */
+
+.sales-points::before {
+  content: url("images/bg-tablet-pattern.svg");
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 87%;
+  max-height: 70vh;
+  max-height: 70dvh;
+  aspect-ratio: 1 / 1.2;
   background-repeat: no-repeat;
   background-position: bottom left;
 }
@@ -724,6 +729,10 @@ input:where([type="text"], [type="email"]) {
 
 .margin-bottom-700 {
   margin-block-end: var(--size-700);
+}
+
+.margin-top-900 {
+  margin-block-start: var(--size-900);
 }
 
 .mx-auto {

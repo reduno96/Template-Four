@@ -82,7 +82,7 @@
         </div>
       </section>
 
-      <section class="padding-block-900">
+      <section class="sales-point | padding-block-900">
         <div class="container">
           <div class="even-columns">
             <div
@@ -149,7 +149,7 @@
         <!-- carousel here -->
         <ul class="slider">
           <li>
-            <img src="images/avatar-ali.png" alt="" />
+            <img class="bg-img" src="images/avatar-ali.png" alt="" />
 
             <div class="slider-content | flow" style="--flow-spacer: 1rem">
               <h3 class="fw-bold">Mohamed Said</h3>
@@ -161,7 +161,7 @@
             </div>
           </li>
           <li>
-            <img src="images/avatar-anisha.png" alt="" />
+            <img class="bg-img" src="images/avatar-anisha.png" alt="" />
 
             <div class="slider-content | flow" style="--flow-spacer: 1rem">
               <h3 class="fw-bold">Karim Charif</h3>
@@ -173,7 +173,7 @@
             </div>
           </li>
           <li>
-            <img src="images/avatar-richard.png" alt="" />
+            <img class="bg-img" src="images/avatar-richard.png" alt="" />
 
             <div class="slider-content | flow" style="--flow-spacer: 1rem">
               <h3 class="fw-bold">Said Poulister</h3>
@@ -185,7 +185,7 @@
             </div>
           </li>
           <li>
-            <img src="images/avatar-shanai.png" alt="" />
+            <img class="bg-img" src="images/avatar-shanai.png" alt="" />
 
             <div class="slider-content | flow" style="--flow-spacer: 1rem">
               <h3 class="fw-bold">Samir rais</h3>
@@ -199,7 +199,9 @@
         </ul>
         <button class="button">Get Started</button>
       </section>
-      <section class="cta | padding-block-900 bg-accent-400 text-neutral-100">
+      <section
+        class="cta | margin-top-900 padding-block-900 bg-accent-400 text-neutral-100"
+      >
         <div class="container">
           <div class="even-columns vertical-align-center">
             <div>
@@ -222,60 +224,53 @@
     >
       <div class="container">
         <div class="primary-footer-wrapper">
-          <div class="primary-footer-logo-social">
-            <a href="#" aria-label="home">
-              <svg class="logo" width="146" height="24">
-                <use xlink:href="images/logo.svg#logo"></use>
-              </svg>
-            </a>
-            <ul class="social-list" role="list" aria-label="social links">
-              <li>
-                <a aria-label="facebook" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="Youtube" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-youtube"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="twitter" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="pinterest" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-pinterest"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a aria-label="instagram" href="#">
-                  <svg class="social-icon">
-                    <use
-                      xlink:href="images/social-icons.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <a class="primary-footer-logo" href="#" aria-label="home">
+            <svg class="logo | mx-auto" width="146" height="24">
+              <use xlink:href="images/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="social-list" role="list" aria-label="social links">
+            <li>
+              <a aria-label="facebook" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="images/social-icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="Youtube" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="images/social-icons.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="twitter" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="images/social-icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="pinterest" href="#">
+                <svg class="social-icon">
+                  <use
+                    xlink:href="images/social-icons.svg#icon-pinterest"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a aria-label="instagram" href="#">
+                <svg class="social-icon">
+                  <use
+                    xlink:href="images/social-icons.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
           <div class="primary-footer-nav">
             <nav class="footer-nav">
               <ul
@@ -294,13 +289,11 @@
               </ul>
             </nav>
           </div>
-          <div class="primary-footer-form">
-            <form action="">
-              <input type="email" />
-              <button class="button" data-shadow="none">Go</button>
-            </form>
-            <p>Go Copyright 2020. All Rights Reserved</p>
-          </div>
+          <form class="primary-footer-form" action="">
+            <input type="email" />
+            <button class="button" data-shadow="none">Go</button>
+          </form>
+          <p class="copyright">Copyright 2020. All Rights Reserved</p>
         </div>
       </div>
     </footer>
