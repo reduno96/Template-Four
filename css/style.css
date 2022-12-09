@@ -263,14 +263,14 @@ p[data-width="wide"] {
     padding: 0.5em;
     width: 1.5em;
     aspect-ratio: 1;
-    background-image: url("images/icon-hamburger.svg");
+    background-image: url("../images/icon-hamburger.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
   }
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url("images/icon-close.svg")
+    background-image: url("../images/icon-close.svg")
   }
   
 }
@@ -391,8 +391,8 @@ input:where([type="text"], [type="email"],) {
   position: absolute;
   z-index: -1;
   inset: 0;  
-  background-image: url("images/bg-tablet-pattern.svg"),
-  url("images/bg-tablet-pattern.svg");
+  background-image: url("../images/bg-tablet-pattern.svg"),
+  url("../images/bg-tablet-pattern.svg");
   background-position: -15rem -5rem, 80rem -42rem;
   background-repeat: no-repeat;
   opacity: 0.1;
@@ -563,7 +563,7 @@ input:where([type="text"], [type="email"],) {
   max-height: 70vh;
   max-height: 70dvh;
   aspect-ratio: 1 / 1.2;
-  background-image: url("images/bg-tablet-pattern.svg");
+  background-image: url("../images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
   background-position: bottom left;
 }
@@ -577,7 +577,7 @@ input:where([type="text"], [type="email"],) {
 /* Sales Points */
 
 .sales-points::before {
-  content: url("images/bg-tablet-pattern.svg");
+  content: url("../images/bg-tablet-pattern.svg");
   position: absolute;
   z-index: -1;
   right: 0;
